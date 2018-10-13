@@ -13,8 +13,8 @@ Updated 2018 James Mohler
    limitations under the License.
 --->
 
-<cfcomponent name="FormUtilities" hint="Form Utilities">
-	
+<cfcomponent name="FormUtilities" hint="Form Utilities" output="false">
+
 
 <cfscript>
 any function init(boolean updateFormScope = true, boolean trimFields = true) output="false" {
@@ -29,24 +29,24 @@ struct function compareLists(required any originalList, required any newList) ou
 	hint="Given two versions of a list, I return a struct containing the values that were added, the values that were removed, and the values that stayed the same." {
 
 	local.results = {
-		addedList 	: [],
-		removedList 	: [],
-		sameList 		: []
+		added 	: [],
+		removed 	: [],
+		same 	: []
 		};
 		
 	for (local.thisItem in arguments.originalList.ListToArray())	{
 
 		if (arguments.newList.ListFindNoCase(local.thisItem)) {
-			local.results.sameList.append(local.thisItem);
+			local.results.same.append(local.thisItem);
 		}
 		else {
-			local.results.removedList.append(local.thisItem);
+			local.results.removed.append(local.thisItem);
 		}
 	}
 
 	for (local.thisItem in arguments.newList.ListToArray()) {
 		if (!ListFindNoCase(arguments.originalList, local.thisItem)) {
-			local.results.addedList.append(local.thisItem);
+			local.results.added.append(local.thisItem);
 		}
 	}
 
@@ -135,7 +135,7 @@ any function buildFormCollections(required struct formScope, boolean updateFormS
 }
 
 
-private boolean function hadFormCollectionSyntax(required any fieldName) output="false" 
+private boolean function hasFormCollectionSyntax(required any fieldName) output="false" 
 	hint="I determine if the field has the form collection syntax, meaning it contains a dot or a bracket." {
 
 	return arguments.fieldName contains "." || arguments.fieldName contains "[";
