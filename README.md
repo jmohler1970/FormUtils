@@ -1,10 +1,8 @@
 # Brian Kotek's Form Utilites
 
 
-Adobe ColdFusion and Lucee landing page
 
-
-##Description:
+## Description
 
 The main capability of this CFC is to generate arrays and structures on the ColdFusion server based on the names of your form fields. So a form field named &quot;user.firstName&quot; would create a structure named &quot;user&quot; with a key of &quot;firstName&quot;, holding the value of that field.
 
@@ -16,7 +14,7 @@ The CFC also has a handy function that will take an original list and a new list
 
 Fix added to handle situations where a form collection key and a form field had the same name.
 
-##Updated
+## Updated
 
 * This utility has been updated for ColdFusion 2016 and above.
 * Rewritten using cfscript
@@ -29,18 +27,18 @@ Fix added to handle situations where a form collection key and a form field had 
 
 No need to download Adobe ColdFusion or Lucee. Commandbox does it all automatically
 
-Get Ortus Solutions Commandbox. https://www.ortussolutions.com/products/commandbox The downloads are at the bottom of the page
+Get Ortus Solutions [Commandbox](https://www.ortussolutions.com/products/commandbox) The downloads are at the bottom of the page
 
 Download this repository to favorite directory.
 
-* On MacOS, my favorite is ~/Sites/ColdFusion/FormUtils
-* On Windows, my favorite is C:\Users\[username]\Documents\Sites\ColdFusion\FormUtils
+* On MacOS, my favorite is `~/Sites/ColdFusion/FormUtils`
+* On Windows, my favorite is `C:\Users\[username]\Documents\Sites\ColdFusion\FormUtils`
 
 In a terminal window, navigate to the appropriate directory
 
-Type box <enter>
+Type `box` <enter>
 
-Type start <enter>
+Type `start` <enter>
 
 index.cfm automatically starts.
 
