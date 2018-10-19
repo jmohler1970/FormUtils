@@ -25,7 +25,7 @@ variables.Users = [
 		<p>
 			<a href="index.cfm" class="button is-primary">Basic Example</a>
 
-			<a href="table-old.cfm" class="button is-primary">Table without Form Util</a>
+			<a href="table.cfm" class="button is-primary">Table with Form Util</a>
 		</p>
 
 		<p>&nbsp;</p>
@@ -33,21 +33,14 @@ variables.Users = [
 
 
 <cfif cgi.request_method IS "post">
-	
-	<cfset util = new FormUtils().init() />
-	
-	<cfset util.buildFormCollections(form) />
-
 	<div class="columns">
 		<div class="column">
 			<cfdump var="#variables.users#" label="variables.user - Original">
 		</div>
 		<div class="column">
-			<cfdump var="#form.user#" label="form.user - Result">
+			<cfdump var="#form#" label="form.user - Result">
 		</div>
 	</div>
-
-
 </cfif>
 
 
@@ -65,10 +58,10 @@ variables.Users = [
 	<cfoutput>
 		<cfloop array="#variables.Users#" item="user" index="i">
 			<tr>
-				<td><input type="number" class="input" name="user[#i#].ID" 			value="#EncodeForHTMLAttribute(User.ID)#" /></td>
-				<td><input type="text"	class="input" name="user[#i#].FirstName"	value="#EncodeForHTMLAttribute(User.FirstName)#" /></td>
-				<td><input type="text"	class="input" name="user[#i#].LastName" 	value="#EncodeForHTMLAttribute(User.LastName)#" /></td>
-				<td><input type="email"	class="input" name="user[#i#].Email" 		value="#EncodeForHTMLAttribute(User.Email)#" /></td>
+				<td><input type="number" class="input" name="user_#i#_ID" 			value="#EncodeForHTMLAttribute(User.ID)#" /></td>
+				<td><input type="text"	class="input" name="user_#i#_FirstName"	value="#EncodeForHTMLAttribute(User.FirstName)#" /></td>
+				<td><input type="text"	class="input" name="user_#i#_LastName" 	value="#EncodeForHTMLAttribute(User.LastName)#" /></td>
+				<td><input type="email"	class="input" name="user_#i#_Email" 		value="#EncodeForHTMLAttribute(User.Email)#" /></td>
 			</tr>	
 		</cfloop>
 	</cfoutput>

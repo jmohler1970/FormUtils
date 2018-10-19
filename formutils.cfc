@@ -87,7 +87,7 @@ any function buildFormCollections(required struct formScope, boolean updateFormS
 				// If there is a temp element defined, means this field is an array or struct.
 				if (!local.currentElement.keyExists(local.tempElement)) {
 
-					// If tempIndex is 0, it's a Struct, otherwise an Array.
+					// If tempIndex == 0, it's a Struct, otherwise an Array.
 					local.currentElement[local.tempElement] = (local.tempIndex == 0) ? {} : [];
 					}
 

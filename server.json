@@ -1,7 +1,7 @@
 {
     "name":"FormUtils",
     "app":{
-        "cfengine":"adobe"
+        "cfengine":"adobe@2018"
     },
     "web":{
         "http":{

@@ -11,11 +11,15 @@
 	<section class="section">
 		<div class="container">
 
-		<p><a href="table.cfm" class="button is-primary">Table Example</a></p>
+		<p>
+			<a href="table.cfm" class="button is-primary">Table with Form Util</a>
+
+			<a href="table-old.cfm" class="button is-primary">Table without Form Util</a>
+		</p>
 
 		<p>&nbsp;</p>
 
-<cfif cgi.request_method EQ "post">
+<cfif cgi.request_method IS "post">
 	
 	<cfset util = new FormUtils().init() />
 	
