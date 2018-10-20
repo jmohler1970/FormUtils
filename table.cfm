@@ -46,8 +46,6 @@ variables.Users = [
 			<cfdump var="#form.user#" label="form.user - Result">
 		</div>
 	</div>
-
-
 </cfif>
 
 
