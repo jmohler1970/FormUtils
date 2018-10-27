@@ -14,7 +14,7 @@ The CFC also has a handy function that will take an original list and a new list
 
 Fix added to handle situations where a form collection key and a form field had the same name.
 
-## Updated 10/24
+## Updated 10/19
 
 * This utility has been updated for ColdFusion 2016 and above.
 * Rewritten using cfscript
@@ -22,7 +22,7 @@ Fix added to handle situations where a form collection key and a form field had 
 * Includes Commandbox config
 * Forms look better with Bulma
 
-## Updated 10/24
+## Updated 10/27
 
 I have split the demo pages and the core file. If you want the core file you are in the right place.
 
