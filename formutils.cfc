@@ -95,10 +95,10 @@ any function buildFormCollections(required struct formScope, boolean updateFormS
 				if (local.delimiterCounter == local.thisField.ListLen('.')) {
 
 					if (local.tempIndex == 0) {
-						local.currentElement[local.tempElement] = arguments.formScope[local.thisField];
+						local.currentElement[local.tempElement] = trim(canonicalize(arguments.formScope[local.thisField], true, true));
 					}
 					else {
-						local.currentElement[local.tempElement][local.tempIndex] = arguments.formScope[local.thisField];
+						local.currentElement[local.tempElement][local.tempIndex] = trim(canonicalize(arguments.formScope[local.thisField], true, true));
 					}
 				}
 
